@@ -39,7 +39,7 @@
 					<% end %>
 			  <% end %>
 			<% else %>
-			  <h3 class= "badge badge-info"><%= link_to 'Sign In to Enroll!', new_user_session_path %> </h3>
+			  <h3 class= "badge badge-info"><%= link_to 'Log In to Enroll!', new_user_session_path, class: "linktext" %> </h3>
 			<% end %>
 		</div>
 
@@ -54,7 +54,7 @@
   		<div class= "section">
   			<h3><%= section.title %></h3>
   			<div class= "row">
-	  			<% section.lessons.each do |lesson| %>
+	  			<% section.lessons.rank(:row_order).each do |lesson| %>
 	  				<div class= "col-12 col-sm-6">
 		  				<div class= "lesson text-center">
 		  					<br />
